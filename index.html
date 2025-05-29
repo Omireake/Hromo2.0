@@ -100,7 +100,7 @@
 					
 					<div class="hrom_big">
 						<div class="hrom">
-							<img class="img_hrom" src="image/hrom.png">
+							<img class="img_hrom" src="image/hrom.png" onclick="changeImage(this)">
 						</div>
 				    </div>
 	<div class="marquee-container">
@@ -221,10 +221,15 @@
 				<div class="modal-content">
 					<span class="close">&times;</span>
 					<img src="image/18.jpg" class="modal-image">
+					<h1 class="modal-h1" >Назад дороги нет...</h1>
 				</div>
 			</div>
 		<audio hidden id="audio_monro" controls autoplay loop>
 			<source src="./music/monro.mp3" type="audio/mpeg">
+				Ваш браузер не поддерживает аудио.
+		</audio>
+		<audio hidden id="audio_asd" controls autoplay loop>
+			<source src="./music/asd.mp3" type="audio/mpeg">
 				Ваш браузер не поддерживает аудио.
 		</audio>
 			
@@ -239,13 +244,18 @@ btn.onclick = function() {
 }
 span.onclick = function() {
     modal.style.display = "none";
+	document.getElementById('audio_monro').pause();
 }
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
+		document.getElementById('audio_monro').pause();
     }
 }
-
+  function changeImage(image) {
+        image.src = "image/dick.png";
+		document.getElementById('audio_asd').play();
+    }
 
 
 </script>

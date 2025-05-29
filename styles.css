@@ -267,6 +267,18 @@ body.dark-theme {
     height: auto;
 }
 
+.modal-h1 {
+	color: white;
+	position: absolute;
+	left:1%;
+	bottom:-9%;
+	font-size: 70px;
+	margin: 0;
+	width: 100%;
+    height: auto;
+	
+}
+
 /* Стиль кнопки открытия */
 #myBtn {
 	position: absolute;
